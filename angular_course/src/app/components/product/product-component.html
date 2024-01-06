@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<div class="py-4 px-6 border rounded flex items-center flex-col mb-2">
+  <h2 class="mb-2 text-md text-center">{{ product.title }}</h2>
 
-</body>
-</html>
+  <img [src]="product.image" [alt]="product.title" class="w-1/6 mb-2">
+  <p>Price: <span class="font-bold">{{ product.price | currency:'RUB' }}</span></p>
+
+  <button
+    class="border py-2 px-4 rounded bg-gray-300" (click)="details = !details">Show details</button>
+
+  <div *ngIf="details">
+    <p>{{ product.description }}</p>
+    <p>Rating: {{ product.rating.rate }}</p>
+  </div>
+</div>
+
