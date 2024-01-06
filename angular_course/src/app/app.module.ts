@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ProductComponent} from "./components/product/product-component";
 import {NgOptimizedImage} from "@angular/common";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {NgOptimizedImage} from "@angular/common";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
