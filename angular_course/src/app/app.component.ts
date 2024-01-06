@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {IProduct} from "./models/product";
-import {ProductsService} from "./services/products.service";
-import {Observable, tap} from "rxjs";
+import { Component, OnInit } from '@angular/core';
+import { IProduct } from "./models/product";
+import { ProductsService } from "./services/products.service";
+import { Observable, tap } from "rxjs";
 
 @Component({
   selector: 'app-root',
